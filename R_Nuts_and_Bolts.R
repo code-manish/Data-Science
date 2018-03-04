@@ -292,6 +292,10 @@ x
 
 x[x %in% 1:5] <- 0
 
+
+
+# assignment questions with solutions.. needs to be cleaned
+
 myfile <- read.csv("hw1_data.csv")
 head(myfile,47)
 
@@ -311,14 +315,15 @@ length(myDF$Ozone[!x])
 
 mean(myDF$Ozone[x])
 
-mysubset <- (myDF$Ozone > 31 & myDF$Temp > 90 )
+myDF
 
 
-x <- complete.cases(myDF$Solar.R)
-x
-myDF[,]
+may <- myDF[which(myDF$Month==6),]
+may1<- may[complete.cases(may$Temp),]
 
-mean(myDF$Solar.R[x])
+mean(may1$Temp)
 
-myDF$Month
+
+
+
 
